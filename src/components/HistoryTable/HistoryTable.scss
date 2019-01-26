@@ -1,0 +1,119 @@
+.ht {
+  &__row {
+    min-height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    //white-space: nowrap;
+    //text-overflow: ellipsis;
+    padding: 0 5px;
+    border: 1px solid #bbb;
+    text-align: left;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__cell-wrap {
+    min-height: 240px;
+    width: 100%;
+    display: flex;
+    overflow: hidden !important; // to override the plugin's inline styles
+    user-select: none;
+
+    &--drag {
+      cursor: move;
+    }
+  }
+
+  &__calendar-header {
+    width: 100%;
+    height: 60px;
+  }
+
+  &__calendar-header-top,
+  &__calendar-header-bot {
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__calendar-header-top {
+    background: #c52020;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__calendar-header-bot {
+    background: #f0f0f0;
+    color: #000;
+  }
+
+  &__calendar-header-inner-wrap {
+    display: flex;
+    height: 100%;
+  }
+
+  &__calendar-header-top-inner {
+    height: 100%;
+    border-right: 2px solid #bbb;
+    position: absolute;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 30px;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &__calendar-header-day {
+    min-width: 30px;
+    height: 30px;
+    border: 1px solid #bbb;
+    color: #333333;
+    background: #f0f0f0;
+  }
+
+  &__day-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #bbb;
+    cursor: default;
+    overflow: hidden;
+  }
+}
+
+.divInnerTableHeader {
+  height: 60px;
+  padding: 15px 5px 0 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.divTableCell {
+  &:not(.editable) {
+    .divTableCell .ht__row {
+      background-color: #f0f0f0;;
+    }
+  }
+}
+
+input.ht__day-cell {
+  margin: 0;
+  border-color: #337ab7;
+}
